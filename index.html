@@ -1,87 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Clipboard landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Tailwindcss cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  A history of everything you copy
+    <title>Frontend Mentor | Clipboard landing page</title>
 
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-  Download for iOS
-  Download for Mac
+      body {
+        font-family: "Bai Jamjuree", sans-serif;
+      }
+      .custom-shadow {
+        box-shadow: 0 3px 0px 0px rgba(59, 130, 246, 0.5);
+      }
+      p {
+        color: hsl(201, 11%, 66%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="h-screen flex justify-center items-center bg-[url('./images/bg-header-mobile.png')] md:bg-[url('./images/bg-header-desktop.png')] bg-cover bg-center px-[1.5rem] md:px-0"
+    >
+      <div class="flex flex-col justify-center items-center text-center">
+        <div>
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <div class="py-12">
+          <h1 class="text-3xl md:text-[2.4rem] font-bold pb-5">
+            A history of everything you copy
+          </h1>
+          <p class="md:max-w-[38rem] text-[18px] m-auto">
+            Clipboard allows you to track and organize everything you copy.
+            Instantly access your clipboard on all your devices.
+          </p>
+        </div>
+        <ul class="flex flex-col space-y-5 md:flex-row gap-5">
+          <li>
+            <a
+              class="bg-green-900 shadow-[0_7px_1px_-3px_rgba(4,120,87,0.5)] font-bold py-3 text-white px-7 rounded-full"
+              href="#"
+              >Download for iOS</a
+            >
+          </li>
+          <li>
+            <a
+              class="bg-blue-900 shadow-[0_7px_1px_-3px_rgba(59,130,246,0.5)] font-bold py-3 text-white px-7 rounded-full"
+              href="#"
+              >Download for Mac</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="px-7 md:px-0">
+      <section>
+        <div class="text-center">
+          <h2 class="text-3xl font-bold pb-5">Keep track of your snippets</h2>
+          <p class="pb-20 max-w-[42rem] m-auto text-[18px]">
+            Clipboard instantly stores any item you copy in the cloud, meaning
+            you can access your snippets immediately on all your devices. Our
+            Mac and iOS apps will help you organize everything.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-15">
+          <div>
+            <img
+              class="md:ml-[-1.8rem]"
+              src="./images/image-computer.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="space-y-15 text-center md:text-left md:space-y-5 md:max-w-[26%]"
+          >
+            <div>
+              <h3 class="text-2xl font-bold pb-2">Quick Search</h3>
+              <p class="text-[18px]">
+                Easily search your snippets by content, category, web address,
+                application, and more.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold pb-2">iCloud Sync</h3>
+              <p class="text-[18px]">
+                Instantly saves and syncs snippets across all your devices.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold pb-2">Complete History</h3>
+              <p class="text-[18px]">
+                Retrieve any snippets from the first moment you started using
+                the app.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  Keep track of your snippets
+      <section class="flex justify-center pt-[7rem]">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold">Access Clipboard anywhere</h2>
+          <p class="max-w-[37rem] m-auto pt-5 pb-20">
+            Whether you’re on the go, or at your computer, you can access all
+            your Clipboard snippets in a few simple clicks.
+          </p>
+          <div>
+            <img src="./images/image-devices.png" alt="" />
+          </div>
+        </div>
+      </section>
 
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
+      <section class="text-center md:px-[10rem] py-[7rem]">
+        <h2 class="text-3xl font-bold">Supercharge your workflow</h2>
+        <p class="pt-4 pb-15">
+          We’ve got the tools to boost your productivity.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-15">
+          <div>
+            <div class="flex justify-center pb-5">
+              <img src="./images/icon-blacklist.svg" alt="" />
+            </div>
+            <h3 class="text-xl font-bold pb-4">Create blacklists</h3>
+            <p class="leading-[2rem]">
+              Ensure sensitive information never makes its way to your clipboard
+              by excluding certain sources.
+            </p>
+          </div>
+          <div>
+            <div class="flex justify-center pb-7">
+              <img src="./images/icon-text.svg" alt="" />
+            </div>
+            <h3 class="text-xl font-bold pb-4">Plain text snippets</h3>
+            <p class="leading-[2rem]">
+              Remove unwanted formatting from copied text for a consistent look.
+            </p>
+          </div>
+          <div>
+            <div class="flex justify-center pb-5">
+              <img src="./images/icon-preview.svg" alt="" />
+            </div>
+            <h3 class="text-xl font-bold pb-4">Sneak preview</h3>
+            <p class="leading-[2rem]">
+              Quick preview of all snippets on your Clipboard for easy access.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  Quick Search
+      <div
+        class="grid grid-cols-1 place-items-center md:grid-cols-5 md:p-[10rem] gap-[8rem]"
+      >
+        <div><img src="./images/logo-google.png" alt="" /></div>
+        <div><img src="./images/logo-ibm.png" alt="" /></div>
+        <div><img src="./images/logo-microsoft.png" alt="" /></div>
+        <div><img src="./images/logo-hp.png" alt="" /></div>
+        <div><img src="./images/logo-vector-graphics.png" alt="" /></div>
+      </div>
 
-  Easily search your snippets by content, category, web address, application, and more.
+      <section class="flex justify-center py-[7rem]">
+        <div class="flex flex-col justify-center items-center text-center">
+          <h2 class="text-3xl font-bold">Clipboard for iOS and Mac OS</h2>
+          <p class="pt-4 pb-14 max-w-[37rem] m-auto">
+            Available for free on the App Store. Download for Mac or iOS, sync
+            with iCloud and you’re ready to start adding to your clipboard.
+          </p>
 
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+          <ul class="flex flex-col space-y-5 md:flex-row gap-4">
+            <li>
+              <a
+                class="bg-green-900 shadow-[0_7px_1px_-3px_rgba(4,120,87,0.5)] font-bold py-3 text-white px-7 rounded-full"
+                href="#"
+                >Download for iOS</a
+              >
+            </li>
+            <li>
+              <a
+                class="bg-blue-900 shadow-[0_7px_1px_-3px_rgba(59,130,246,0.5)] font-bold py-3 text-white px-7 rounded-full"
+                href="#"
+                >Download for Mac</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="flex flex-col md:flex-row justify-between bg-blue-100 items-center py-[2rem] md:px-[10rem] px-7"
+    >
+      <div class="flex flex-col md:flex-row items-center md:gap-[7rem]">
+        <div><img class="h-[40px]" src="./images/logo.svg" alt="" /></div>
+        <div
+          class="flex text-center md:text-left flex-col md:flex-row md:gap-[7rem] mt-8 md:mt-0"
+        >
+          <ul class="leading-[2.5rem] md:leading-[2rem]">
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+          <ul class="leading-[2.5rem] md:leading-[2rem]">
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Press Kit</a></li>
+          </ul>
+          <ul>
+            <li><a href="">Install Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 md:mt-0">
+        <ul class="flex items-center gap-4">
+          <li>
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="icon facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/icon-twitter.svg" alt="icon twitter" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/icon-instagram.svg" alt="icon instagram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
